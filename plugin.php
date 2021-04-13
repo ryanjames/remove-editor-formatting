@@ -20,4 +20,15 @@
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
  */
 
- namespace RemoveEditorFormatting;
+function custom_dequeue(){
+  wp_dequeue_style( 'wp-block-library' );
+  wp_dequeue_style( 'wp-block-library-theme' );
+} 
+add_action( 'wp_enqueue_scripts', 'custom_dequeue', 100 );
+add_action( 'wp_head', 'custom_dequeue', 100 );
+
+add_filter( 'block_editor_settings' , 'remove_guten_wrapper_styles' );
+function remove_guten_wrapper_styles( $settings ) {
+    unset($settings['styles'][0]);
+    return $settings;
+}

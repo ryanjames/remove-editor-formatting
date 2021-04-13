@@ -1,0 +1,17 @@
+{
+  "name": "ryanjames/remove-editor-formatting",
+  "description": "Removes default injected Gutenberg editor formatting",
+  "homepage": "https://github.com/ryanjames/remove-editor-formatting",
+  "keywords": ["wordpress", "wp", "plugin", "gutenberg"],
+  "type": "wordpress-plugin",
+  "license": "GPL-2.0-or-later",
+  "authors": [
+    {
+      "name": "ryanjames",
+      "email": "ryan@ryanjam.es"
+    }
+  ],
+  "require": {
+      "composer/installers": "~1.0"
+  }
+}
